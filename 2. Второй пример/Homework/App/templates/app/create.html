@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django</title>
+</head>
+<body>
+    <h2>Добавление студента</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <p>
+            <label>Введите имя</label><br>
+            {{ form_create.name }}
+        </p>
+        <p>
+            <label>Выберите курсы</label><br>
+            <div>
+                {{ form_create.course }}
+            </div>
+        </p>
+        <input type="submit" value="Сохранить" />
+    </form>
+</body>
+</html>
